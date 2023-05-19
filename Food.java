@@ -1,4 +1,3 @@
-package SORDERI;
 public class Food {
     private int foodId;
     private String foodName;

@@ -1,7 +1,7 @@
 public class FoodOrder {
     private Food food;
     private int amount;
-    
+
     FoodOrder(Food f, int amount){
         food = f;
         this.amount = amount;

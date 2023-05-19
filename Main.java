@@ -1,4 +1,3 @@
-package SORDERI;
 public class Main{
     public static void main(String[] agrs){
         Allmenu allmenu = new Allmenu();
