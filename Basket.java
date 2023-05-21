@@ -16,6 +16,14 @@ public class Basket {
         return cs;
     }
     public void addOrder(FoodOrder fo){
+        for(FoodOrder i : foodOrder){
+            if(i.getFoodId()==fo.getFoodId()){
+                i.setAmount(i.getAmount()+fo.getAmount());
+                i.setAllPriceThisOrder((i.getAllPriceThisOrder()+fo.getAllPriceThisOrder()));
+                return;
+            }
+        }
         foodOrder.add(fo);
+        System.out.println("in");
     }
 }

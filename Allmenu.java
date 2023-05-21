@@ -13,4 +13,7 @@ public class Allmenu {
             System.out.println(i.toString()+"\n");
         }
     }
+    public ArrayList<Food> getFood(){
+        return food;
+    }
 }

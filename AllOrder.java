@@ -7,7 +7,7 @@ public class AllOrder {
     public void appendOrder(Basket bs){
         for(FoodOrder i : bs.getFoodOrder()){
             fo.add(i);
-            sumPrice += i.getFood().getPrice();
+            sumPrice += i.getAllPriceThisOrder();
         }
     }
     public double getSumPrice() {
@@ -15,9 +15,10 @@ public class AllOrder {
     }
     public void getFo() {
         for(FoodOrder i : fo){
-            System.out.println(i.getFood().toString()+"\nAmount: "+i.getAmount()+"\nSummaryPrice: "+getSumPrice());
+            System.out.println(i.getFood().getMenuForCus()+"\nAmount: "+i.getAmount()+"\nSummaryPrice: "+i.getAllPriceThisOrder());
             System.out.println();
         }
+        System.out.println(getSumPrice());
     }
 
 }

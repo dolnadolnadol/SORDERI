@@ -4,6 +4,9 @@ public class Food {
     private String foodDetail;
     private boolean availableStatus;
     private double price;
+    Food(){
+        
+    }
     Food(int foodId, String foodName, String foodDetail, boolean availableStatus, double price){
         this.availableStatus = availableStatus;
         this.foodDetail = foodDetail;
@@ -40,6 +43,9 @@ public class Food {
     }
     public void setStatus(boolean st){
         availableStatus = st;
+    }
+    public String getMenuForCus(){
+        return "Id: "+getId()+"\nName: "+getName()+"\nDetail: "+getDetail()+"\nPrice: "+getPrice();
     }
     @Override
     public String toString() {
