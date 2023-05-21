@@ -1,8 +1,6 @@
 public class FoodOrder{
     private Food food;
-    private int foodId;
     private int amount;
-    private double price;
     private double allPriceThisOrder;
 
     FoodOrder(Allmenu alme, int id, int amount){
@@ -10,14 +8,12 @@ public class FoodOrder{
             System.out.println("cant find menu.");
         }
         this.amount = amount;
-        allPriceThisOrder = getAmount()*price;
+        allPriceThisOrder = getAmount()*food.getPrice();
     }
     private boolean check(Allmenu alme, int id){
         for(Food i : alme.getFood()){
             if(i.getId()==id){
                 food = i;
-                price = i.getPrice();
-                foodId = i.getId();
                 return true;
             }
         }
@@ -40,9 +36,6 @@ public class FoodOrder{
     }
     public double getAllPriceThisOrder(){
         return allPriceThisOrder;
-    }
-    public int getFoodId() {
-        return foodId;
     }
     
 }

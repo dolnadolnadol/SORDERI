@@ -17,13 +17,23 @@ public class Basket {
     }
     public void addOrder(FoodOrder fo){
         for(FoodOrder i : foodOrder){
-            if(i.getFoodId()==fo.getFoodId()){
+            if(!i.getFood().getAvailableStatus()){
+                System.out.println(i.getFood().getId()+" Food Not Available.");
+                return;
+            }
+            else if(i.getFood().getId()==fo.getFood().getId() && i.getFood().getAvailableStatus()){
                 i.setAmount(i.getAmount()+fo.getAmount());
                 i.setAllPriceThisOrder((i.getAllPriceThisOrder()+fo.getAllPriceThisOrder()));
                 return;
             }
         }
-        foodOrder.add(fo);
-        System.out.println("in");
+        if(fo.getFood().getAvailableStatus()){
+            foodOrder.add(fo);
+        }
+        else{
+            System.out.println(fo.getFood().getId()+" Food Not Available.");
+            System.out.println();
+        }
+        
     }
 }

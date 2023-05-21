@@ -5,7 +5,7 @@ public class Food {
     private boolean availableStatus;
     private double price;
     Food(){
-        
+
     }
     Food(int foodId, String foodName, String foodDetail, boolean availableStatus, double price){
         this.availableStatus = availableStatus;
@@ -43,6 +43,9 @@ public class Food {
     }
     public void setStatus(boolean st){
         availableStatus = st;
+    }
+    public boolean getAvailableStatus(){
+        return availableStatus;
     }
     public String getMenuForCus(){
         return "Id: "+getId()+"\nName: "+getName()+"\nDetail: "+getDetail()+"\nPrice: "+getPrice();

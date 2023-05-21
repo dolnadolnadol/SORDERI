@@ -6,8 +6,11 @@ public class AllOrder {
 
     public void appendOrder(Basket bs){
         for(FoodOrder i : bs.getFoodOrder()){
-            fo.add(i);
-            sumPrice += i.getAllPriceThisOrder();
+            if(i.getFood().getAvailableStatus()){
+                fo.add(i);
+                sumPrice += i.getAllPriceThisOrder();
+                return;
+            }
         }
     }
     public double getSumPrice() {
