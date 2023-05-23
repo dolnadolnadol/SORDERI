@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class AllOrder {
+public class AllOrder extends Payment{
     private ArrayList<FoodOrder> fo = new ArrayList<>();
     private double sumPrice = 0;
 

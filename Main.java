@@ -19,10 +19,9 @@ public class Main{
         cs2.CreateOrder(new FoodOrder(allmenu, 1, 4));
         cs2.CreateOrder(new FoodOrder(allmenu, 1, 5));
 
-        
-
         cs2.sendOrder();
         cs2.getFo();
+        cs2.QRpayment();
 
     }
 }
