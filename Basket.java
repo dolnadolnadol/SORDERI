@@ -33,7 +33,6 @@ public class Basket {
         else{
             System.out.println(fo.getFood().getId()+" Food Not Available.");
             System.out.println();
-        }
-        
+        }   
     }
 }
