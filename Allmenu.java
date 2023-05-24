@@ -7,6 +7,7 @@ public class Allmenu {
     }
     public void addMenu(Food f){
         food.add(f);
+        System.out.println("AddMenu "+f.getName()+" in Allmenu Complete.");
     }
     public void getAllmenu(){
         for(Food i : food){

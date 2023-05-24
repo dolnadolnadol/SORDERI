@@ -21,6 +21,7 @@ public class Customer extends AllOrder{
     }
     public void sendOrder(){
         super.appendOrder(basket);
+        System.out.println("\nSendOrder Complete.");
         basket = new Basket();
     }
     

@@ -17,11 +17,12 @@ public class AllOrder extends Payment{
         return sumPrice;
     }
     public void getFo() {
+        System.out.println("\nAllOrder that you order :");
         for(FoodOrder i : fo){
-            System.out.println(i.getFood().getMenuForCus()+"\nAmount: "+i.getAmount()+"\nSummaryPrice: "+i.getAllPriceThisOrder());
+            System.out.println(i.getFood().getMenuForCus()+"\nAmount: "+i.getAmount()+"\nPrice This Order: "+i.getAllPriceThisOrder()+" Baht.");
             System.out.println();
         }
-        System.out.println(getSumPrice());
+        System.out.println("SumaryPrice: " + getSumPrice());
     }
 
 }

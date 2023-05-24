@@ -14,7 +14,7 @@ public class Main{
         cs2.CreateOrder(new FoodOrder(allmenu, 2, 1));
 
         cs2.CreateOrder(new FoodOrder(allmenu, 1, 1));
-        cs2.CreateOrder(new FoodOrder(allmenu, 1, 2));
+        cs2.CreateOrder(new FoodOrder(allmenu, 3, 2));
         cs2.CreateOrder(new FoodOrder(allmenu, 1, 3));
         cs2.CreateOrder(new FoodOrder(allmenu, 1, 4));
         cs2.CreateOrder(new FoodOrder(allmenu, 1, 5));

@@ -17,6 +17,9 @@ public class Basket {
     }
     public void addOrder(FoodOrder fo){
         for(FoodOrder i : foodOrder){
+            if(fo.getFood()==null){
+                return;
+            }
             if(!i.getFood().getAvailableStatus()){
                 System.out.println(i.getFood().getId()+" Food Not Available.");
                 return;
@@ -24,6 +27,7 @@ public class Basket {
             else if(i.getFood().getId()==fo.getFood().getId() && i.getFood().getAvailableStatus()){
                 i.setAmount(i.getAmount()+fo.getAmount());
                 i.setAllPriceThisOrder((i.getAllPriceThisOrder()+fo.getAllPriceThisOrder()));
+                System.out.println("\naddOrder in Basket complete.");
                 return;
             }
         }
@@ -31,8 +35,7 @@ public class Basket {
             foodOrder.add(fo);
         }
         else{
-            System.out.println(fo.getFood().getId()+" Food Not Available.");
-            System.out.println();
+            System.out.println("\n" + fo.getFood().getId()+" Food Not Available.");
         }   
     }
 }

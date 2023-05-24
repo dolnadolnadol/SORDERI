@@ -5,10 +5,13 @@ public class FoodOrder{
 
     FoodOrder(Allmenu alme, int id, int amount){
         if(!check(alme, id)){
-            System.out.println("cant find menu.");
+            System.out.println("cant find "+id+" menu. ");
         }
-        this.amount = amount;
-        allPriceThisOrder = getAmount()*food.getPrice();
+        else{
+            this.amount = amount;
+            allPriceThisOrder = getAmount()*food.getPrice();
+        }
+        
     }
     private boolean check(Allmenu alme, int id){
         for(Food i : alme.getFood()){

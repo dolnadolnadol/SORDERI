@@ -4,9 +4,9 @@ public class Payment{
 
     }
     public void QRpayment(){
-        System.out.println("\n" + payment[0] + "\n" + "|||||| |||| ||||| || |||||||||");
+        System.out.println("\nFor Payment " + payment[0] + "\n" + "|||||| |||| ||||| || |||||||||");
     }
     public void Cashpayment(){
-        System.out.println("\n" + payment[1] + "\n" + "Give waiter a money");
+        System.out.println("\nFor Payment " + payment[1] + "\n" + "Give waiter a money");
     }
 }

@@ -48,7 +48,7 @@ public class Food {
         return availableStatus;
     }
     public String getMenuForCus(){
-        return "Id: "+getId()+"\nName: "+getName()+"\nDetail: "+getDetail()+"\nPrice: "+getPrice();
+        return "Id: "+getId()+" Name: "+getName()+"\nPrice: "+getPrice();
     }
     @Override
     public String toString() {
